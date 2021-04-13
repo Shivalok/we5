@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "5652c98d-0ea9-4ae3-87ac-7676ca699926",
+		"name": "sahithcollections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3NTYyYWM3NTc3NTMzYmI4NGEzNWUxIiwibmFtZSI6InNhaGl0aCJ9LCJpYXQiOjE2MTgzMDU3MTYsImV4cCI6MTYyMDg5NzcxNn0.mvfCI9tMoMMvHjSQgFocvObCj1-8puioZ5QHWBeGRQw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sahith@dummy.com\",\r\n    \"password\":\"dummy\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Edit Get Event",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3NTYyYWM3NTc3NTMzYmI4NGEzNWUxIiwibmFtZSI6InNhaGl0aCIsImlzT25Cb2FyZGVkIjpmYWxzZX0sImlhdCI6MTYxODMwNjQ5NywiZXhwIjoxNjIwODk4NDk3fQ.E75d1ey8FyzyN4Zqk3FO3oj7oqnNDQM30SaUcr0MO4c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/sahit/Pictures/CollectPackageSeqDiagram.png"
+						},
+						{
+							"key": "eventName",
+							"value": "community",
+							"type": "text"
+						},
+						{
+							"key": "eventLocation",
+							"value": "ON",
+							"description": "_",
+							"type": "text"
+						},
+						{
+							"key": "_id",
+							"value": "60759e90af68302998b388a9",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/event/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"event",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3NTYyYWM3NTc3NTMzYmI4NGEzNWUxIiwibmFtZSI6InNhaGl0aCIsImlzT25Cb2FyZGVkIjpmYWxzZX0sImlhdCI6MTYxODMwNjQ5NywiZXhwIjoxNjIwODk4NDk3fQ.E75d1ey8FyzyN4Zqk3FO3oj7oqnNDQM30SaUcr0MO4c",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userImage",
+							"type": "file",
+							"src": "/C:/Users/sahit/Documents/NetBeansProjects/Lab5ClientApp/downloaded.png"
+						},
+						{
+							"key": "password",
+							"value": "dummychange",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "namechange",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3NTYyYWM3NTc3NTMzYmI4NGEzNWUxIiwibmFtZSI6InNhaGl0aCIsImlzT25Cb2FyZGVkIjpmYWxzZX0sImlhdCI6MTYxODMwNjQ5NywiZXhwIjoxNjIwODk4NDk3fQ.E75d1ey8FyzyN4Zqk3FO3oj7oqnNDQM30SaUcr0MO4c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"6075795bd18bcf2e804f6e8e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/event",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dummy@dummy.com\",\r\n    \"password\":\"dummy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onBoardingAPI",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA3NTYyYWM3NTc3NTMzYmI4NGEzNWUxIiwibmFtZSI6InNhaGl0aCIsImlzT25Cb2FyZGVkIjpmYWxzZX0sImlhdCI6MTYxODMwNjQ5NywiZXhwIjoxNjIwODk4NDk3fQ.E75d1ey8FyzyN4Zqk3FO3oj7oqnNDQM30SaUcr0MO4c",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userImage",
+							"type": "file",
+							"src": "/C:/Users/sahit/Documents/NetBeansProjects/Lab5ClientApp/downloaded.png"
+						},
+						{
+							"key": "password",
+							"value": "dummychange",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "namechange",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
